@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>I/O Devices | IGCSE CS 0984</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="glass-nav">
+        <div class="logo">CS 0984</div>
+        <div class="nav-links">
+            <a href="index.html" class="glass-btn">Home</a>
+            <a href="architecture.html" class="glass-btn">Architecture</a>
+            <a href="input-output.html" class="glass-btn">I/O Devices</a>
+            <a href="storage.html" class="glass-btn">Storage</a>
+            <a href="network.html" class="glass-btn">Networking</a>
+            <button id="theme-toggle" class="glass-btn">🌓 Mode</button>
+        </div>
+    </nav>
+
+    <main class="content-container">
+        <header class="page-header">
+            <h1>Input & Output Devices</h1>
+            <p>Interacting with the Digital World</p>
+        </header>
+
+        <details>
+            <summary>1. Direct Data Entry (Barcodes & Scanners)</summary>
+            <div class="content-body">
+                <h3>Barcode Scanners (2D and 3D)</h3>
+                <p>When a barcode is scanned, a red laser or LED light is reflected back. The dark bars absorb light, while white spaces reflect it. A <strong>photoelectric cell</strong> detects the light intensity and converts it into binary data.</p>
+                <img src="Barcode.png" alt="Barcode Logic" class="content-img small">
+                
+                <h3>QR Codes (Quick Response)</h3>
+                <p>Unlike 1D barcodes, QR codes are 2D and can hold significantly more data (up to 7,000 digits). They are read by cameras/imaging devices using three large squares in the corners for alignment.</p>
+                <img src="QRCode.png" alt="QR Code Structure" class="content-img small">
+
+                <h3>Optical Character & Mark Recognition</h3>
+                <img src="Scanner.png" alt="Optical Scanner" class="content-img">
+                <ul>
+                    <li><strong>OCR:</strong> Converts scanned text into editable digital files.</li>
+                    <li><strong>OMR:</strong> Detects marks on a specific position on a paper (e.g., multiple-choice exams).</li>
+                </ul>
+            </div>
+        </details>
+
+        <details>
+            <summary>2. Touchscreens: Capacitive vs. Resistive</summary>
+            <div class="content-body">
+                <div class="comparison-grid">
+                    <div class="comp-box">
+                        <h3>Capacitive</h3>
+                        <img src="Capacitive-Touch-Screen.png" alt="Capacitive Diagram" class="content-img">
+                        <p>Uses a glass layer coated with a conductive material. When a finger touches the screen, the <strong>electrostatic field</strong> is changed. Sensors at the corners calculate the coordinates.</p>
+                        <p><em>Pros:</em> Multi-touch support, very durable. <em>Cons:</em> Requires bare skin or conductive stylus.</p>
+                    </div>
+                    <div class="comp-box">
+                        <h3>Resistive</h3>
+                        <img src="Resistive-Touch-Screen.png" alt="Resistive Diagram" class="content-img">
+                        <p>Consists of two flexible layers with a gap. Pressing down makes the layers touch, completing a circuit. The change in <strong>resistance</strong> is measured.</p>
+                        <p><em>Pros:</em> Use with gloves/any object, cheaper. <em>Cons:</em> No multi-touch, easily scratched.</p>
+                    </div>
+                </div>
+            </div>
+        </details>
+
+        <details>
+            <summary>3. Sensors in Action</summary>
+            <div class="content-body">
+                <p>Sensors are the primary input for <strong>Control and Monitoring</strong> systems. They send continuous <strong>Analogue</strong> signals which must be converted to <strong>Digital</strong> via an ADC (Analogue-to-Digital Converter).</p>
+                
+                <div class="sensor-details">
+                    <img src="Monitor-Control-System.png" alt="Monitoring vs Control" class="content-img">
+                    <h3>Common Sensors and Applications:</h3>
+                    <ul>
+                        <li><strong>Temperature:</strong> Used in Central Heating (Central-Heat-Sys.png) and Greenhouses (Green-House.png).</li>
+                        <li><strong>Acoustic/Sound:</strong> Detecting breaking glass in security systems.</li>
+                        <li><strong>Moisture/Humidity:</strong> Managing soil levels in agriculture.</li>
+                        <li><strong>PIR (Infrared):</strong> Detecting motion for automated doors or lights.</li>
+                    </ul>
+                </div>
+            </div>
+        </details>
+
+        <details>
+            <summary>4. Output: Projectors and Actuators</summary>
+            <div class="content-body">
+                <h3>Digital Light Processing (DLP)</h3>
+                <img src="Light-Projector-DLP.png" alt="DLP Projector Mechanism" class="content-img">
+                <p>Uses millions of <strong>Micro-mirrors</strong> on a tiny chip. These mirrors tilt toward or away from the light source thousands of times per second. A color wheel spins to create the full spectrum of light.</p>
+
+                <h3>Actuators</h3>
+                <p>An actuator is an electromechanical output device. It takes the digital command from the computer and converts it into physical movement (opening a valve, starting a motor, or moving a robotic arm).</p>
+            </div>
+        </details>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Network Hardware | IGCSE CS 0984</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="glass-nav">
+        <div class="logo">CS 0984</div>
+        <div class="nav-links">
+            <a href="index.html" class="glass-btn">Home</a>
+            <a href="architecture.html" class="glass-btn">Architecture</a>
+            <a href="input-output.html" class="glass-btn">I/O Devices</a>
+            <a href="storage.html" class="glass-btn">Storage</a>
+            <a href="network.html" class="glass-btn">Networking</a>
+            <button id="theme-toggle" class="glass-btn">🌓 Mode</button>
+        </div>
+    </nav>
+
+    <main class="content-container">
+        <header class="page-header">
+            <h1>Network Hardware</h1>
+            <p>The Physical Infrastructure of Connectivity</p>
+        </header>
+
+        <details>
+            <summary>1. Network Interface Cards (NIC) & Modems</summary>
+            <div class="content-body">
+                <h3>Network Interface Card (NIC)</h3>
+                <p>A NIC is the internal hardware that allows a computer to connect to a network. It provides a unique, hardware-level address called a <strong>MAC Address</strong> (Media Access Control).</p>
+                <div class="info-box">
+                    <strong>The MAC Address:</strong> 48-bit address usually written in Hexadecimal (e.g., 00:1A:2B:3C:4D:5E). It is permanent and assigned at the factory.
+                </div>
+
+                <h3>Modem (Modulator-Demodulator)</h3>
+                <p>A modem converts <strong>Digital</strong> data from a computer into <strong>Analogue</strong> signals for transmission over telephone lines/cables, and vice versa.</p>
+                <svg width="100" height="60" viewBox="0 0 100 60">
+                    <rect x="10" y="20" width="80" height="30" rx="5" fill="none" stroke="var(--text-color)" stroke-width="2"/>
+                    <circle cx="25" cy="35" r="3" fill="var(--text-color)"/>
+                    <circle cx="40" cy="35" r="3" fill="var(--text-color)"/>
+                    <path d="M70 10 L80 20 M85 5 L95 15" stroke="var(--text-color)" stroke-width="2"/>
+                </svg>
+            </div>
+        </details>
+
+        <details>
+            <summary>2. Hubs, Switches, and Bridges</summary>
+            <div class="content-body">
+                <div class="comparison-grid">
+                    <div class="comp-box">
+                        <h3>Hub</h3>
+                        <p>A "dumb" device. When it receives a data packet, it <strong>broadcasts</strong> it to every device on the network. This causes high traffic and security risks.</p>
+                    </div>
+                    <div class="comp-box">
+                        <h3>Switch</h3>
+                        <p>A "smart" device. It records the MAC address of every device connected to it. It sends data <strong>only</strong> to the specific destination device, reducing collisions.</p>
+                    </div>
+                </div>
+
+                <h3>Bridges</h3>
+                <p>A bridge is used to connect two separate <strong>Local Area Networks (LANs)</strong> that use the same protocol (e.g., two Ethernet networks in different wings of a school) so they function as a single network.</p>
+            </div>
+        </details>
+
+        <details>
+            <summary>3. Routers: The Core of the Internet</summary>
+            <div class="content-body">
+                <p>Routers are responsible for routing data packets between <strong>different</strong> networks (e.g., connecting your home LAN to the Internet WAN).</p>
+                
+                <h3>How a Router Works:</h3>
+                <ul>
+                    <li>It inspects the <strong>IP Address</strong> of the incoming data packet.</li>
+                    <li>It maintains a <strong>Routing Table</strong> to find the most efficient path to the destination.</li>
+                    <li>It can assign local IP addresses to devices using DHCP.</li>
+                </ul>
+
+                <div class="info-box">
+                    <strong>Difference:</strong> While a Switch uses <em>MAC Addresses</em> to find devices on a local network, a Router uses <em>IP Addresses</em> to find networks globally.
+                </div>
+            </div>
+        </details>
+
+        <details>
+            <summary>4. Wireless Access Points (WAP)</summary>
+            <div class="content-body">
+                <p>A WAP allows devices to connect to a wired network using Wi-Fi. It converts the radio waves from your device back into electrical signals for the wired backbone.</p>
+                
+                <h3>Cables vs. Wireless</h3>
+                <table>
+                    <tr>
+                        <th>Hardware</th>
+                        <th>Advantages</th>
+                        <th>Disadvantages</th>
+                    </tr>
+                    <tr>
+                        <td>Ethernet (Cat5/6)</td>
+                        <td>Fast, Secure, No interference.</td>
+                        <td>Expensive to install, not portable.</td>
+                    </tr>
+                    <tr>
+                        <td>Wi-Fi (WAP)</td>
+                        <td>High mobility, easy to add devices.</td>
+                        <td>Lower security, signal interference.</td>
+                    </tr>
+                </table>
+            </div>
+        </details>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

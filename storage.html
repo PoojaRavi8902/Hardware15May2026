@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Storage | IGCSE CS 0984</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="glass-nav">
+        <div class="logo">CS 0984</div>
+        <div class="nav-links">
+            <a href="index.html" class="glass-btn">Home</a>
+            <a href="architecture.html" class="glass-btn">Architecture</a>
+            <a href="input-output.html" class="glass-btn">I/O Devices</a>
+            <a href="storage.html" class="glass-btn">Storage</a>
+            <a href="network.html" class="glass-btn">Networking</a>
+            <button id="theme-toggle" class="glass-btn">🌓 Mode</button>
+        </div>
+    </nav>
+
+    <main class="content-container">
+        <header class="page-header">
+            <h1>Data Storage & Memory</h1>
+            <p>From Volatile Circuits to Permanent Magnetic Platters</p>
+        </header>
+
+        <details>
+            <summary>1. Primary Memory: The Direct Access Layer</summary>
+            <div class="content-body">
+                <p>Primary memory is directly accessible by the CPU. It holds the data and instructions currently in use.</p>
+                <img src="Mem-Storage.png" alt="Memory Hierarchy" class="content-img">
+
+                <div class="comparison-grid">
+                    <div class="comp-box">
+                        <h3>RAM (Random Access Memory)</h3>
+                        <p><strong>Volatile:</strong> Contents are lost when power is removed. It stores the OS, running programs, and data in use.</p>
+                        <ul>
+                            <li><strong>DRAM (Dynamic):</strong> Uses a transistor and a capacitor. Needs constant refreshing. <br><img src="DRAM.png" alt="DRAM Circuit" class="content-img small"></li>
+                            <li><strong>SRAM (Static):</strong> Uses "Flip-Flops" to hold data. Faster and used for Cache. <br><img src="SRAM.png" alt="SRAM Circuit" class="content-img small"></li>
+                        </ul>
+                    </div>
+                    <div class="comp-box">
+                        <h3>ROM (Read Only Memory)</h3>
+                        <p><strong>Non-Volatile:</strong> Contents remain when power is lost. It is permanent and cannot be altered easily.</p>
+                        <p><strong>Usage:</strong> Stores the <strong>BIOS</strong> (Basic Input/Output System) or the 'Bootstrap' which tells the computer how to start up and find the Operating System.</p>
+                    </div>
+                </div>
+            </div>
+        </details>
+
+        <details>
+            <summary>2. Secondary Storage: HDD vs. SSD</summary>
+            <div class="content-body">
+                <h3>Magnetic Storage (HDD)</h3>
+                <p>Data is stored by magnetizing tiny particles on a disk platter. A read/write head moves across the spinning platter.</p>
+                <img src="Tracks-Sectors.png" alt="HDD Tracks and Sectors" class="content-img">
+                <div class="info-box">
+                    <p><strong>Latency:</strong> The time it takes for the correct sector to rotate under the read/write head.</p>
+                    <p><strong>Structure:</strong> Disks are formatted into <strong>Concentric Tracks</strong> and <strong>Sectors</strong>.</p>
+                </div>
+
+                <h3>Solid State Drive (SSD)</h3>
+                <p>SSDs use <strong>NAND flash memory</strong>. They have no moving parts, making them faster, more durable, and silent. They control the flow of electrons through "Floating Gate" transistors.</p>
+                
+                <table>
+                    <tr>
+                        <th>Feature</th>
+                        <th>HDD</th>
+                        <th>SSD</th>
+                    </tr>
+                    <tr>
+                        <td>Speed</td>
+                        <td>Slower (Mechanical)</td>
+                        <td>Very Fast (Electronic)</td>
+                    </tr>
+                    <tr>
+                        <td>Durability</td>
+                        <td>Fragile (Moving parts)</td>
+                        <td>Robust</td>
+                    </tr>
+                    <tr>
+                        <td>Cost</td>
+                        <td>Lower per GB</td>
+                        <td>Higher per GB</td>
+                    </tr>
+                </table>
+            </div>
+        </details>
+
+        <details>
+            <summary>3. Optical Storage: Pits and Lands</summary>
+            <div class="content-body">
+                <p>CDs, DVDs, and Blu-rays use a laser beam to read data from a spinning plastic disk.</p>
+                <h3>How it Works:</h3>
+                <ul>
+                    <li>The surface contains <strong>Pits</strong> (indentations) and <strong>Lands</strong> (flat areas).</li>
+                    <li>A laser shines on the surface. Pits scatter light (Binary 0), and Lands reflect light back to a sensor (Binary 1).</li>
+                    <li><strong>Blu-ray:</strong> Uses a blue laser with a shorter wavelength, allowing it to read smaller, more tightly packed pits (higher capacity).</li>
+                </ul>
+            </div>
+        </details>
+
+        <details>
+            <summary>4. Capacity & Calculations (Math of Storage)</summary>
+            <div class="content-body">
+                <p>IGCSE 0984 requires you to know the difference between Base-10 (KB) and Base-2 (KiB).</p>
+                <div class="info-box">
+                    <ul>
+                        <li><strong>1 Kibibyte (KiB)</strong> = 1,024 Bytes ($2^{10}$)</li>
+                        <li><strong>1 Mebibyte (MiB)</strong> = 1,024 KiB ($2^{20}$)</li>
+                        <li><strong>1 Gibibyte (GiB)</strong> = 1,024 MiB ($2^{30}$)</li>
+                    </ul>
+                </div>
+                <p><strong>Example Calculation:</strong> If a file is 2 MiB, how many bits is it? <br>
+                $2 \times 1024 \times 1024 \times 8 = 16,777,216$ bits.</p>
+            </div>
+        </details>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

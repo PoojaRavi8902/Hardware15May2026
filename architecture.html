@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Architecture | IGCSE CS 0984</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="glass-nav">
+        <div class="logo">CS 0984</div>
+        <div class="nav-links">
+            <a href="index.html" class="glass-btn">Home</a>
+            <a href="architecture.html" class="glass-btn">Architecture</a>
+            <a href="input-output.html" class="glass-btn">I/O Devices</a>
+            <a href="storage.html" class="glass-btn">Storage</a>
+            <a href="network.html" class="glass-btn">Networking</a>
+            <button id="theme-toggle" class="glass-btn">🌓 Mode</button>
+        </div>
+    </nav>
+
+    <main class="content-container">
+        <header class="page-header">
+            <h1>Computer Architecture</h1>
+            <p>Understanding the "Brain" of the Computer</p>
+        </header>
+
+        <details>
+            <summary>1. The Von Neumann Model</summary>
+            <div class="content-body">
+                <p>The Von Neumann model describes a system where data and programs are stored in the same memory. This is the foundation of almost all modern computers.</p>
+                
+                <img src="VonNeuMannArch.png" alt="Von Neumann Architecture Diagram" class="content-img">
+                
+                <h3>Key Components:</h3>
+                <ul>
+                    <li><strong>ALU (Arithmetic Logic Unit):</strong> Performs calculations and logical decisions.</li>
+                    <li><strong>CU (Control Unit):</strong> Manages the flow of data and instructions.</li>
+                    <li><strong>Registers:</strong> High-speed storage locations within the CPU.</li>
+                </ul>
+
+                <img src="SysBusandMem.png" alt="System Buses and Memory" class="content-img">
+                
+                <h3>The Three System Buses:</h3>
+                <div class="info-box">
+                    <p><strong>Address Bus:</strong> Unidirectional. Carries signals relating to addresses between the processor and memory.</p>
+                    <p><strong>Data Bus:</strong> Bi-directional. Sends data between the processor, memory, and I/O devices.</p>
+                    <p><strong>Control Bus:</strong> Bi-directional. Carries signals from the CU to control activities.</p>
+                </div>
+            </div>
+        </details>
+
+        <details>
+            <summary>2. The Fetch-Decode-Execute Cycle</summary>
+            <div class="content-body">
+                <p>This is the continuous process that the CPU follows to process instructions.</p>
+                
+                <svg width="300" height="150" viewBox="0 0 300 150" class="svg-anim">
+                    <rect x="10" y="50" width="80" height="50" rx="10" fill="var(--text-color)" opacity="0.8" />
+                    <text x="25" y="80" fill="var(--bg-color)" font-size="12">FETCH</text>
+                    <line x1="90" y1="75" x2="110" y2="75" stroke="var(--text-color)" stroke-width="2" />
+                    <rect x="110" y="50" width="80" height="50" rx="10" fill="var(--text-color)" opacity="0.6" />
+                    <text x="120" y="80" fill="var(--bg-color)" font-size="12">DECODE</text>
+                    <line x1="190" y1="75" x2="210" y2="75" stroke="var(--text-color)" stroke-width="2" />
+                    <rect x="210" y="50" width="80" height="50" rx="10" fill="var(--text-color)" />
+                    <text x="220" y="80" fill="var(--bg-color)" font-size="12">EXECUTE</text>
+                </svg>
+
+                <img src="Fetch-Decode-Exec.png" alt="Detailed FDE Cycle" class="content-img">
+                
+                <h3>Step-by-Step Breakdown:</h3>
+                <ol>
+                    <li>The PC contains the address of the next instruction.</li>
+                    <li>The address is copied to the <strong>MAR</strong> via the Address Bus.</li>
+                    <li>The instruction at that address is moved to the <strong>MDR</strong>.</li>
+                    <li>The instruction is copied to the <strong>CIR</strong> to be decoded.</li>
+                    <li>The <strong>PC</strong> is incremented by 1.</li>
+                </ol>
+            </div>
+        </details>
+
+        <details>
+            <summary>3. CPU Performance</summary>
+            <div class="content-body">
+                <p>What makes a computer "fast"? It's more than just the name of the processor.</p>
+                <table>
+                    <tr>
+                        <th>Factor</th>
+                        <th>Impact</th>
+                    </tr>
+                    <tr>
+                        <td><strong>Clock Speed</strong></td>
+                        <td>Measured in Hz. The faster the clock, the more instructions per second.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Cores</strong></td>
+                        <td>More cores allow for parallel processing of instructions.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Cache</strong></td>
+                        <td>High-speed memory inside the CPU that stores frequently used data.</td>
+                    </tr>
+                </table>
+            </div>
+        </details>
+
+        <details>
+            <summary>4. Embedded Systems</summary>
+            <div class="content-body">
+                <p>An embedded system is a computer system with a dedicated function within a larger mechanical or electrical system.</p>
+                
+                <div class="img-row">
+                    <figure>
+                        <img src="Embed-Security.png" alt="Security System" class="content-img small">
+                        <figcaption>Security System Microcontroller</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="Embed-Vending.png" alt="Vending Machine" class="content-img small">
+                        <figcaption>Vending Machine Control</figcaption>
+                    </figure>
+                </div>
+
+                <h3>Benefits vs. Drawbacks:</h3>
+                <ul>
+                    <li><strong>Pros:</strong> Small, low power, low cost, very reliable for specific tasks.</li>
+                    <li><strong>Cons:</strong> Difficult to upgrade, specialized skill required for repair.</li>
+                </ul>
+            </div>
+        </details>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
